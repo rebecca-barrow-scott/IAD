@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Dynamic Beauty
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h4>Statistics</h4>
+  <canvas #chart id="chart" height=300></canvas>
+  <ion-button (click)="updateChart()" id="updateChart" expand="block">Update Chart</ion-button>
+</ion-content>

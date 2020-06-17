@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Category</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div id="category-card" color="primary">
+        <ion-img [src]="icon"></ion-img>    
+      <ion-input type='text' [(ngModel)]="name" name="name" placeholder="New Category" value="New Category"></ion-input>
+    </div>
+
+    <h4>Icon</h4>
+    <h5 id="subtitle">Choose an icon</h5>
+    <section *ngFor="let icon_name of icon_names; index as i" id="icons">
+      <ion-row *ngIf="i%3==0" id="left">
+        <ion-col>
+          <ion-button (click)="changeImage(icon_name)" color="secondary"><ion-img [src]="icon_name"></ion-img></ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="i%3==1" id="middle">
+        <ion-col>
+          <ion-button (click)="changeImage(icon_name)" color="secondary"><ion-img [src]="icon_name"></ion-img></ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="i%3==2" id="right">
+        <ion-col>
+          <ion-button (click)="changeImage(icon_name)" color="secondary"><ion-img [src]="icon_name"></ion-img></ion-button>
+        </ion-col>
+      </ion-row>
+    </section>
+    <div class="wrap">
+      <h5 id="break">OR</h5>
+    </div>  
+    <section>
+      <h5 id="subtitle">Upload an icon</h5>
+      <input #imageInput id="imageInput" type="file" accept="image/*" (change)="imageSelected(imageInput.files)">
+    </section>
+    
+    <div id="note">
+      <h4>Note</h4>
+      <ion-input type='text' [(ngModel)]="note" name="note" placeholder="Note" value="Note"></ion-input>
+    </div>
+    
+    <footer>
+      <ion-button expand="full" (click)="closeModal()" color="tertiary">Add</ion-button>
+    </footer>
+</ion-content>
+

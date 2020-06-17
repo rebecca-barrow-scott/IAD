@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div id="category-card" color="primary">
+      <ion-img [src]="icon"></ion-img>
+      <h3>{{name}}</h3>
+      <h4 id="subtitle">{{brand}}</h4>
+    </div>
+    <ion-row>
+      <ion-col id="attribute" size="4"><h4>Shade</h4></ion-col>
+      <ion-col id="value"><ion-label color="medium">{{shade}}</ion-label></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col id="attribute" size="4"><h4>Favourite</h4></ion-col>
+      <ion-col id="value"><ion-checkbox color="secondary" checked="{{favourite}}" disabled="true"></ion-checkbox></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col id="attribute" size="4"><h4>Date</h4></ion-col>
+      <ion-col id="value"><ion-datetime [(ngModel)]="date" name="date" displayFormat="DD/MM/YYYY" placeholder="{{date}}" disabled="true"></ion-datetime></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col id="attribute" size="4"><h4>Quantity</h4></ion-col>
+      <ion-col id="value"><ion-label color="medium">{{quantity}}</ion-label></ion-col>
+    </ion-row>
+    <div id="note">
+      <h4>Note</h4>
+      <ion-label color="medium">{{note}}</ion-label>
+    </div>
+    
+    <footer>
+      <ion-button expand="full" (click)="closeModal()" color="tertiary">Done</ion-button>
+    </footer>
+</ion-content>
+

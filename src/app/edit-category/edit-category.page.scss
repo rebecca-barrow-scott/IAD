@@ -1,0 +1,90 @@
+ion-title {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: white;
+    color: #212121;
+}
+
+ion-button{
+    font-family: 'Quicksand', sans-serif;
+}
+#subtitle{
+    padding: 0px 15px;
+    font-family: 'Handlee', cursive;
+    color: grey;
+}
+#break{
+    color: grey;
+    text-align: center;
+    padding-top: 160px;
+    font-size: 20px;
+}
+#imageInput{
+    padding: 5px 10px;
+    width: 100%;
+}
+
+#category-card{
+    background-color: #CAB4C9;
+    padding: 25px;
+    margin: 5% auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    ion-img{
+        margin:auto;
+        height: 30%;
+        width: 30%;
+        padding: 10px;
+        background-color: #FFFFFF;
+        border-radius: 100%;
+        border: 1px gray solid;
+    }
+}
+
+
+#left{
+    display: flex;
+    justify-content:center;
+    width: 33.3%;
+    height: 50px;
+    float:left;
+    ion-col{
+        display: flex;
+        justify-content:center;
+    }
+}
+#middle{
+    display: flex;
+    justify-content:center;
+    height: 50px;
+    width: 33.3%;
+    float:left;
+    ion-col{
+        display: flex;
+        justify-content:center;
+    }
+}
+#right{
+    display: flex;
+    justify-content:center;
+    height: 50px;
+    width: 33.3%;
+    float:right;
+    ion-col{
+        display: flex;
+        justify-content:center;
+    }
+}
+h4 {
+    padding: 0px 10px;
+}
+#blank{
+    background:white;
+    color:white;
+}
+ion-button{
+    ion-img{
+        padding: 10px;
+    }
+}

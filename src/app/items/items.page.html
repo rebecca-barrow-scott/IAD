@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Dynamic Beauty
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h4>Items</h4>
+  <h6>Favourites</h6>
+    <ion-list>
+      <ion-item-sliding *ngFor="let item of category_items; index as i">
+        <div *ngIf="item.favourite; then favourite"></div>
+        <ng-template #favourite>
+          <ion-item-options side="start">
+            <ion-item-option color="danger" (click)="deleteItem(item.id, i)">Delete</ion-item-option>
+          </ion-item-options>
+          <ion-item-options side="end">
+            <ion-item-option color="tertiary" (click)="editItem(item.id, i)">Edit</ion-item-option>
+          </ion-item-options>
+          <ion-item (click)="showItem(i)">
+            <ion-img [src]="item.icon" id="category_icon"></ion-img>
+            <ion-col>
+              <ion-row id="product"><ion-label>{{item.name}}</ion-label></ion-row>
+              <ion-row id="shade"><ion-label>{{item.brand}}</ion-label></ion-row>
+              <ion-row id="shade"><ion-label>{{item.shade}}</ion-label></ion-row>
+            </ion-col>
+          </ion-item>
+        </ng-template>
+      </ion-item-sliding>
+    </ion-list>
+  <h6>All Items</h6>
+  <ion-list>
+    <div *ngIf="category_items.length == 0; then noItems; else items"></div>
+    <ng-template #noItems>
+        <ion-item>
+          <ion-col>
+            <ion-row><ion-label>No Items</ion-label></ion-row>
+          </ion-col>
+        </ion-item>
+    </ng-template>
+
+    <ng-template #items>
+      <ion-item-sliding *ngFor="let item of category_items; index as i">
+        <ion-item-options side="start">
+          <ion-item-option color="danger" (click)="deleteItem(item.id, i)">Delete</ion-item-option>
+        </ion-item-options>
+        <ion-item-options side="end">
+          <ion-item-option color="tertiary" (click)="editItem(item.id, i)">Edit</ion-item-option>
+        </ion-item-options>
+        <ion-item (click)="showItem(i)">
+          <ion-img [src]="item.icon" id="category_icon"></ion-img>
+          <ion-col>
+            <ion-row id="product"><ion-label>{{item.name}}</ion-label></ion-row>
+            <ion-row id="shade"><ion-label>{{item.brand}}</ion-label></ion-row>
+            <ion-row id="shade"><ion-label>{{item.shade}}</ion-label></ion-row>
+          </ion-col>
+        </ion-item>
+      </ion-item-sliding>
+    </ng-template>
+
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="tertiary" (click)="addItem(cat_id)"><ion-icon name="add"></ion-icon></ion-fab-button>
+  </ion-fab>
+  <footer></footer>
+</ion-content>

@@ -1,0 +1,28 @@
+ion-title {
+    font-family: 'Quicksand', sans-serif;
+  }
+h4, h6 {
+  padding: 0px 10px; 
+  font-family: 'Quicksand', sans-serif;
+}
+#category_icon{
+  padding-right: 10px;
+  width: 45px;
+  height: 35px;
+}
+ion-item {
+  text-transform: capitalize;
+}
+
+#product{
+  font-size: medium;
+  padding-top: 5px;
+}
+#shade{
+  font-size: small;
+  padding: 2px;
+}
+footer{
+  height: 75px;
+  width: 100%;
+}

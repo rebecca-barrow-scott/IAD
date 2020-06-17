@@ -1,0 +1,7 @@
+{
+  "name": "Dynamic Beauty",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

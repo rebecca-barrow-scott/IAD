@@ -1,0 +1,51 @@
+ion-title {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: white;
+    color: #212121;
+}
+ion-button{
+    font-family: 'Quicksand', sans-serif;
+}
+h3, #subtitle{
+    font-family: 'Quicksand', sans-serif;
+}
+ion-label{
+    padding-left: 5px;
+}
+
+#category-card{
+    background-color: #CAB4C9;
+    padding: 25px;
+    margin: 5% auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    ion-img{
+        margin:auto;
+        height: 30%;
+        width: 30%;
+        padding: 10px;
+        background-color: #FFFFFF;
+        border-radius: 100%;
+        border: 1px gray solid;
+    }
+}
+h4 {
+    padding: 0px 10px;
+}
+#attribute{
+    border-bottom: 1px solid #c2c2c2;
+}
+#value{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    border-bottom: 1px solid #c2c2c2;
+}
+#note{
+    padding-top: 20px;
+    ion-label{
+        padding-left: 10px;
+    }
+}

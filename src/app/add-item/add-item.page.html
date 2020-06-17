@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div id="category-card" color="primary">
+      <ion-img [src]="icon"></ion-img>
+      <ion-input type='text' [(ngModel)]="name" name="name" placeholder="New Item"></ion-input>
+      <ion-input type='text' [(ngModel)]="brand" name="brand" placeholder="Brand"></ion-input>
+    </div>
+
+    <h4>Icon</h4>
+    <h5 id="subtitle">Choose an icon</h5>
+    <section *ngFor="let icon_name of icon_names; index as i" id="icons">
+      <ion-row *ngIf="i%3==0" id="left">
+        <ion-col>
+          <ion-button (click)="changeImage(icon_name)" color="secondary"><ion-img [src]="icon_name"></ion-img></ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="i%3==1" id="middle">
+        <ion-col>
+          <ion-button (click)="changeImage(icon_name)" color="secondary"><ion-img [src]="icon_name"></ion-img></ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="i%3==2" id="right">
+        <ion-col>
+          <ion-button (click)="changeImage(icon_name)" color="secondary"><ion-img [src]="icon_name"></ion-img></ion-button>
+        </ion-col>
+      </ion-row>
+    </section>
+    <div class="wrap">
+      <h5 id="break">OR</h5>
+    </div>  
+    <section>
+      <h5 id="subtitle">Upload an icon</h5>
+      <input #imageInput id="imageInput" type="file" accept="image/*" (change)="imageSelected(imageInput.files)">
+    </section>
+
+    <ion-row>
+      <ion-col id="attribute" size="4"><h4>Shade</h4></ion-col>
+      <ion-col id="value"><ion-input type='text' [(ngModel)]="shade" name="shade" placeholder="Shade Name"></ion-input></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col id="attribute" size="4"><h4>Favourite</h4></ion-col>
+      <ion-col id="value"><ion-checkbox color="secondary" checked="false" [(ngModel)]="favourite" name="favourite"></ion-checkbox></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col id="attribute" size="4"><h4>Date</h4></ion-col>
+      <ion-col id="value"><ion-datetime [(ngModel)]="date" name="date" displayFormat="DD/MM/YYYY" placeholder="01-01-2000"></ion-datetime></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col id="attribute" size="4"><h4>Quantity</h4></ion-col>
+      <ion-col id="value"><ion-input type='tel' [(ngModel)]="quantity" name="quantity" placeholder="0" maxlength="3"></ion-input></ion-col>
+    </ion-row>
+    <div id="note">
+      <h4>Note</h4>
+      <ion-input type='text' [(ngModel)]="note" name="note" placeholder="New Note"></ion-input>
+    </div>
+    
+    <footer>
+      <ion-button expand="full" (click)="closeModal()" color="tertiary">Add</ion-button>
+    </footer>
+</ion-content>
+
