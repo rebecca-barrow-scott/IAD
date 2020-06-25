@@ -1,12 +1,12 @@
 # Interactive Application Development - Assignments 1&2
 ## About
 <p>This project was contructed for Interactive Application Development. The assignment had the following specifications: </p>
-- Dynamic lists
-- Modal pages
-- Editable content
-- Chart
-- Storage using ionic's local storage
-- Image upload
+- Dynamic lists  
+- Modal pages  
+- Editable content  
+- Chart  
+- Storage using ionic's local storage  
+- Image upload  
 
 ## Versions used for this project
 Visual Studio v1.45.0  
@@ -18,7 +18,7 @@ Angular CLI v9.1.5
 Ionic v5.4.16  
 Cordova v9.0.0  
 
-## instructions 
+## Instructions 
 1. Download node.js at the following link and follow the installation instructions  
 https://nodejs.org/en/download/ 
 
