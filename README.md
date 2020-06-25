@@ -1,12 +1,12 @@
 # Interactive Application Development - Assignments 1&2
 ## About
 <p>This project was contructed for Interactive Application Development. The assignment had the following specifications: </p>
-- Dynamic lists  
-- Modal pages  
-- Editable content  
-- Chart  
-- Storage using ionic's local storage  
-- Image upload  
+* Dynamic lists  
+* Modal pages  
+* Editable content  
+* Chart  
+* Storage using ionic's local storage  
+* Image upload  
 
 ## Versions used for this project
 Visual Studio v1.45.0  
